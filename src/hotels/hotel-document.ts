@@ -8,6 +8,7 @@ export interface HotelChangedEvent {
   country: string;
   location: { lat: number; lon: number } | null;
   amenityCodes: string[];
+  coverPhotoId: string | null;
   priceFrom: number | null;
   maxCapacity: number | null;
   roomTypeCount: number;
@@ -30,6 +31,7 @@ export const toDocument = (hotel: HotelChangedEvent): HotelDocument => ({
   country: hotel.country,
   location: hotel.location,
   amenityCodes: hotel.amenityCodes,
+  coverPhotoId: hotel.coverPhotoId ?? null,
   priceFrom: hotel.priceFrom,
   maxCapacity: hotel.maxCapacity,
   roomTypeCount: hotel.roomTypeCount,

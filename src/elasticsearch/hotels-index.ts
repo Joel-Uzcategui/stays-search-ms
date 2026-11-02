@@ -32,6 +32,7 @@ export const hotelsIndexDefinition: Omit<IndicesCreateRequest, 'index'> = {
       country: { type: 'keyword' },
       location: { type: 'geo_point' },
       amenityCodes: { type: 'keyword' },
+      coverPhotoId: { type: 'keyword', index: false },
       priceFrom: { type: 'integer' },
       maxCapacity: { type: 'integer' },
       roomTypeCount: { type: 'integer' },
